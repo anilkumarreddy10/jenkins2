@@ -1,4 +1,4 @@
-FROM tomcat
-EXPOSE 8080
-LABEL author=Anil
-
+FROM java:7
+COPY App.java .
+RUN javac App.java
+CMD ["java","App"]
